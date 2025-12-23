@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name</title>
+  <title>Ioanna Pappa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -12,6 +12,7 @@
       color: #222;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
 
     .container {
@@ -21,12 +22,20 @@
     }
 
     header {
-      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    header img {
+      width: 150px;
+      border-radius: 8px;
     }
 
     h1 {
       font-size: 2.4rem;
-      margin-bottom: 10px;
+      margin: 0 0 8px 0;
       font-weight: 500;
     }
 
@@ -36,15 +45,15 @@
     }
 
     section {
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
     h2 {
       font-size: 1.4rem;
+      font-weight: 500;
       border-bottom: 2px solid #ddd;
       padding-bottom: 6px;
       margin-bottom: 20px;
-      font-weight: 500;
     }
 
     ul {
@@ -55,18 +64,12 @@
       margin-bottom: 8px;
     }
 
-    .project {
-      margin-bottom: 20px;
+    .item {
+      margin-bottom: 22px;
     }
 
-    .project-title {
+    .item-title {
       font-weight: 600;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #666;
     }
 
     a {
@@ -77,70 +80,114 @@
     a:hover {
       text-decoration: underline;
     }
+
+    footer {
+      margin-top: 70px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header img {
+        width: 130px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
+    <!-- HEADER -->
     <header>
-      <h1>Your Name</h1>
-      <div class="subtitle">
-        · Field of Study
+      <img src="assets/photo.jpg" alt="Ioanna Pappa">
+
+      <div>
+        <h1>Ioanna Pappa</h1>
+        <div class="subtitle">
+          Prospective PhD Applicant · Computer Science
+        </div>
       </div>
     </header>
 
+    <!-- ABOUT -->
     <section>
       <h2>About</h2>
       <p>
-        I am a interested in research on
-        <strong>Topic A</strong>, <strong>Topic B</strong>, and <strong>Topic C</strong>.
-        My background includes academic training and research-oriented projects
-        with a focus on analytical and methodological rigor.
+        I am a  with interests in research on
+        <strong>your topic A</strong>, <strong>your topic B</strong>, and
+        <strong>your topic C</strong>. My background includes research-oriented
+        coursework and independent projects with an emphasis on analytical
+        thinking and methodology.
       </p>
     </section>
 
+    <!-- RESEARCH INTERESTS -->
     <section>
       <h2>Research Interests</h2>
       <ul>
-        <li>Research topic 1</li>
-        <li>Research topic 2</li>
-        <li>Research topic 3</li>
+        <li>Research interest 1</li>
+        <li>Research interest 2</li>
+        <li>Research interest 3</li>
       </ul>
     </section>
 
+    <!-- RESEARCH & PROJECTS -->
     <section>
-      <h2>Projects & Research</h2>
+      <h2>Research & Projects</h2>
 
-      <div class="project">
-        <div class="project-title">Master’s Thesis</div>
+      <div class="item">
+        <div class="item-title">Master’s Thesis</div>
         <div>
-          Short description of your thesis, research question,
-          and methods used.
+          Short description of your thesis and research focus.
+          <br>
+          <a href="pdf/thesis.pdf" target="_blank">Read thesis (PDF)</a>
         </div>
       </div>
 
-      <div class="project">
-        <div class="project-title">Research Project / Coursework</div>
+      <div class="item">
+        <div class="item-title">Research Project</div>
         <div>
-          Brief explanation of a relevant project or academic work.
+          Brief description of a research or course project.
+          <br>
+          <a href="projects/project1.html">Read more</a>
         </div>
       </div>
 
     </section>
 
+    <!-- TUTORIALS -->
+    <section>
+      <h2>Tutorials & Notes</h2>
+
+      <div class="item">
+        <div class="item-title">Tutorial: Topic Name</div>
+        <div>
+          Short description of the tutorial or notes.
+          <br>
+          <a href="tutorials/tutorial1.html">View tutorial</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
     <section>
       <h2>Contact</h2>
       <p>
-        Email: yourname [at] university [dot] edu
+        Email: ioanna.pappa [at] university [dot] edu
       </p>
     </section>
 
     <footer>
-      © Your Name
+      © Ioanna Pappa
     </footer>
 
   </div>
 </body>
 </html>
-
