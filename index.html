@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ioanna Pappa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+  
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f6f1e8;
+  background-image:
+    linear-gradient(#e8e1d5 1px, transparent 1px),
+    linear-gradient(to right, #e8e1d5 1px, transparent 1px);
+  background-size: 50px 50px;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 60px 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e7dfd3;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 28px;             
+  margin-bottom: 70px;
+}
+
+header img {
+  width: 170px;
+  height: 170px;      
+  border-radius: 50%;   
+  object-fit: cover;   
+  border: 3px solid #e7dfd3;  
+  box-shadow: 0 6px 18px rgba(92, 70, 50, 0.08); 
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 10px;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #efe7dc;  
+  color: #5c4632;            
+  border: 1px solid #e2d8c9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.buttons a:hover {
+  background-color: #e6dccf;
+  transform: translateY(-2px);
+}
+
+.pdf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;   
+  font-size: 0.75rem;  
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.2s ease;
+}
+
+.pdf-button:hover {
+  background-color: #f3f4f6;
+}
+
+.doi-link {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.doi-link:hover {
+  color: #374151;
+  text-decoration: underline;
+}
+  
+section {
+  margin-bottom: 60px;
+}
+
+section:not(:last-of-type) {
+  position: relative;
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+  border-bottom: none;
+}
+
+section:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background-color: #e5ded2;
+}
+
+.item {
+  margin-bottom: 28px;
+  padding: 0;
+}
+
+.publication-title {
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: #1f3a8a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 80px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header img {
+    width: 140px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3ebe0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8cbb8;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbbba4;
+}
+
+.section-block {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background: #faf8f3;
+  border: 1px solid #e7dfd3;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(92, 70, 50, 0.08);
+}
+
+.project-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.project-header i {
+  color: #5c4632;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.github {
+  background-color: #efe7dc;
+  color: #5c4632;
+  border: 1px solid #e2d8c9;
+}
+
+.github:hover {
+  background-color: #e6dccf;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background-color: #f3eee6;
+  color: #6b5b4a;
+  margin-bottom: 14px;
+}
+
+</style>
+  
+</head>
+
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<header>
+  <img src="assets/image.jpeg" alt="Ioanna Pappa">
+
+  <div>
+    <h1>Ioanna Pappa</h1>
+    <div class="subtitle">
+      Intelligent Systems · Machine Learning · Unmanned Systems Research
+    </div>
+
+    <div class="buttons">
+  <a href="https://github.com/ioannapappa" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+
+  <a href="https://gr.linkedin.com/in/maria-ioanna-pappa-9487aa2a2" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+
+  <a href="https://www.researchgate.net/profile/Maria-Ioanna-Pappa-3" target="_blank">
+    <i class="fab fa-researchgate"></i> ResearchGate
+  </a>
+
+</div>
+
+</header>
+
+<!-- ABOUT -->
+<section>
+  <h2>About</h2>
+  <p>
+    I am a postgraduate student in Computer Science with a background in Intelligent Systems 
+    and a strong interest in Artificial Intelligence, Machine Learning and Unmanned Systems. 
+    My academic work focuses on research-driven methodologies, model development and evaluation 
+    and AI applications in environmental and real-time detection systems.
+  </p>
+</section>
+
+<!-- RESEARCH INTERESTS -->
+<section>
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Artificial Intelligence & Deep Learning</li>
+    <li>Computer Vision</li>
+    <li>Unmanned Aerial Systems (UAS)</li>
+    <li>Environmental Risk Modeling</li>
+    <li>Geospatial Data Analysis (GIS)</li>
+  </ul>
+</section>
+
+<!-- RESEARCH -->
+<section>
+  <h2>Research</h2>
+
+  <!-- Master's Thesis -->
+  <div class="item">
+    <div class="Master's-thesis-title">
+      <strong>Master’s Thesis.</strong> Lightning Detection in Thunderstorms Using Artificial Intelligence
+    </div>
+
+    <p>
+      This research investigates the application of deep learning models for real-time lightning detection.
+      YOLOv5 and YOLOv8 architectures were implemented and evaluated on a curated lightning image dataset.
+      The study explores AI-driven alternatives to traditional physics-based detection systems.
+    </p>
+
+    <a class="pdf-button"
+       href="mailto:ipappa@cs.uoi.gr?subject=Request for Thesis PDF&body=Dear Ioanna,%0D%0A%0D%0AI would like to request a copy of your Master's thesis.%0D%0A%0D%0ABest regards,">
+       Request Thesis PDF
+    </a>
+  </div>
+
+  <!-- Publication -->
+<div class="item">
+  <div class="publication-title">
+      <strong>Publication</strong>
+  </div>
+  
+  <p>
+    Skilodimou, H. D.; Bathrellos, G. D.; 
+    <strong>Pappa, M.-I.</strong>; 
+    Youssef, A. M.; Kontakiotis, G.; 
+    Karymbalis, E. (2024).
+    <em>Assessing flood hazard mapping using AHP and GIS in a tectonically active region.</em>
+    Zeitschrift für Geomorphologie.
+    <br>
+    <a href="https://doi.org/10.1127/zfg/2024/0804"
+       target="_blank"
+       class="doi-link">
+       https://doi.org/10.1127/zfg/2024/0804
+    </a>
+  </p>
+</div>
+
+</section>
+
+<!-- INDEPENDENT PROJECTS -->
+<section>
+  <h2>Independent Projects</h2>
+
+  <div class="item">
+    <div class="publication-title">
+      Real-Time Object Detection with YOLOv8
+    </div>
+
+    <p>
+      Development of a custom object detection pipeline using YOLOv8.
+      Includes dataset preprocessing, model training, and performance evaluation.
+    </p>
+
+    <a href="projects/yolo.html" class="pdf-button">
+      View Project
+    </a>
+  </div>
+
+  <div class="item">
+    <div class="publication-title">
+      GIS-Based Environmental Risk Mapping
+    </div>
+
+    <p>
+      Personal project applying spatial analysis techniques in GIS
+      for environmental hazard assessment and visualization.
+    </p>
+
+    <a href="projects/gis.html" class="pdf-button">
+      View Project
+    </a>
+  </div>
+
+</section>  
+  
+<!-- TUTORIALS -->
+  
+<section id="tutorials" class="section-block">
+  <h2 class="section-title">Tutorials</h2>
+
+  <div class="project-card">
+    <span class="tag">Hardware–Software Co-Design</span>
+    <div class="project-header">
+      <h3>
+        <i class="fas fa-microchip"></i>
+        MicroBlaze AXI4-Lite Adder on Arty A7-100T
+      </h3>
+    </div>
+
+    <p class="project-description">
+      End-to-end hardware–software co-design tutorial demonstrating
+      custom AXI4-Lite peripheral integration with MicroBlaze,
+      including timing closure, power analysis and Vitis validation.
+    </p>
+
+    <div class="project-buttons">
+      <a href="https://github.com/IoannaPappa/MicroBlaze-AXI4-Lite-Adder-on-Arty-A7-100T"
+         target="_blank"
+         class="pdf-button github">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming:</strong> Python, C, SQL</li>
+    <li><strong>AI/ML:</strong> Neural Networks, Deep Learning, Computer Vision (YOLO)</li>
+    <li><strong>GIS:</strong> ArcGIS, QGIS</li>
+    <li><strong>Robotics:</strong> ROS, Trajectory Planning</li>
+    <li><strong>Tools:</strong> Linux, MATLAB</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <p>
+    Email: ipappa [at] cs.uoi [dot] gr <br>
+    GitHub: <a href="https://github.com/ioannapappa" target="_blank">github.com/ioannapappa</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Maria Ioanna Pappa
+</footer>
+
+</div>
+</body>
+</html>
